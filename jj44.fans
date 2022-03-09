@@ -1,0 +1,89 @@
+MODEL_SPACE_NAME = 'jj44'
+
+ZERO_BODY_TERM = -483.996
+A_MIN, A_MAX = 56, 100
+Z_CORE, A_CORE = 28, 56
+PROTON_ORBITS = [8, 9, 10, 11]
+NEUTRON_ORBITS = [8, 9, 10, 11]
+
+DATA_FILE_NAME = 'sps/jj44.levels'
+
+AI_SPE = 'sps/jj44.spe'
+AI_STRONG= 'sps/jj44-strong.tbme'
+AI_COUL = 'sps/jj44-coul.tbme'
+AI_ISOV = ''
+AI_ISOT = ''
+
+INITIAL_SPE = 'sps/jj44.spe'
+INITIAL_STRONG = 'sps/jj44-strong.tbme'
+INITIAL_COUL = 'sps/jj44-coul.tbme'
+INITIAL_ISOV = ''
+INITIAL_ISOT = ''
+
+
+
+NEW_RUN = True
+NUM_SKIP_RUNS = 0
+PAUSE_BETWEEN = True
+
+
+fit_to_energies = True
+fit_to_MED = False
+fit_to_TED = False
+fit_to_delMED = False
+
+
+STBME_CHOICE = 7
+EXCLUDE_ORBIT_LIST = []
+DO_NOT_FIT = []
+CALCULATE_ALL = True
+# STBME_CHOICE
+# Select your choice of groupings for the strong TBME
+# 1 - all TBME in one group with one overall strength parameter
+# 2 - all TBME in two groups based on isospin value (T=0,1)
+# 3 - all TBME in three groups evolving separately: pp, nn, and pn
+# 4 - TBME in isospin formalism groups so that pp,nn, and pn evolve together
+# 5 - TBME in isospin formalism groups, but only the diagonal are fit
+# 6 - All TBME in their own groups, each allowed to fit on their own
+# 7 - Specific to the calcium fit in the fp shell UFP-CA
+# 8 - Fit diagonal matrix elements except those involving excluded orbits
+# 9 - custom fit
+
+
+# Set to the empty set [] for a full fit, all the way forward  to
+# vlc=max_groups and all the way back, or input a specific set of
+# varied lcs (e.g. [7,6,5]) to only run those in that order
+VLC_CHOICES = []
+
+# Max number of iterations in the forward/backward portion of the fit
+# a custom fit in VLC_CHOICES will use the BACKWARD_ITER_MAX only
+FORWARD_ITER_MAX = 2
+BACKWARD_ITER_MAX = 10
+
+
+# if you know the full SVD would fail, (not enough data points), you can
+# select a maximum number of groups to fit to. if you choose 0, the default
+# maximum will be used
+MAX_GROUPS_CHOICE = 0
+
+
+
+
+
+
+STORE_EVERY_VLC = True
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
